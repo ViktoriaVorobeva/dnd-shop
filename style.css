@@ -118,6 +118,7 @@ h3 {
   position: absolute;
   user-select: none;
   cursor: pointer;
+  touch-action: none;
 }
 
 .products__vine {

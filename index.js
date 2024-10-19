@@ -3,7 +3,7 @@ const box = document.querySelector('.products__box')
 const backet = document.querySelector('.backet');
 const main = document.querySelector('.main');
 
-const COUNT = 3;
+const COUNT = 4;
 
 let button;
 let startY;
@@ -90,6 +90,8 @@ const isScrolling = (event) => {
 
 //перетаскивание
 const moveElement = (event, element) => {
+    event.preventDefault();
+
     element.style.left = `${event.pageX - element.width/2}px`;
     element.style.top = `${event.pageY - element.height/2}px`;
     isOffPage(element, document.body)
@@ -107,6 +109,8 @@ const moveElement = (event, element) => {
 
 //обработка drop-события
 const pointerUpHandler = (event, element, starts) => {
+    event.preventDefault();
+
     if (isElementinContainer(event, backet)) {
         element.style.top = `${backet.offsetTop + (backet.getBoundingClientRect().height * 0.8) - element.height}px`;
         isBacketBottom(element);
@@ -138,6 +142,8 @@ const pointerUpHandler = (event, element, starts) => {
 
 //обработка старта
 const startHandler = (event) => {
+    event.preventDefault();
+
     startY = event.pageY - window.pageYOffset;
     scrollTop = window.pageYOffset;
 
