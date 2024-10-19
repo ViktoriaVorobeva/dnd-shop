@@ -1,0 +1,344 @@
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "YSText";
+
+  font-display: swap;
+  src: url("./src/assets/fonts/YSText-Medium.woff2") format("woff2");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+html {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "YSText", "Arial", sans-serif;
+  color: black;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #edf6ff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 28px;
+}
+
+.products__box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-width: 212px;
+  width: 50%;
+
+  @media (min-width: 768px) {
+    width: 45%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 35%;
+    max-width: 375px;
+  }
+}
+
+.products__image {
+  position: relative;
+  user-select: none;
+  z-index: -1;
+  min-width: 212px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    min-width: 275px;
+  }
+
+  @media (min-width: 1024px) {
+    min-width: 350px;
+  }
+}
+
+.product {
+  position: absolute;
+  user-select: none;
+  cursor: pointer;
+}
+
+.products__vine {
+  top: -3px;
+  left: 22px;
+  min-width: 37px;
+  width: 17.5%;
+
+  @media (min-width: 425px) {
+    top: -1%;
+    left: 10%;
+  }
+}
+
+.products__milk {
+  top: 31px;
+  left: 64px;
+  min-width: 37px;
+  width: 17.5%;
+
+  @media (min-width: 425px) {
+    top: 7%;
+    left: 30%;
+  }
+}
+
+.products__jam {
+  top: 80px;
+  left: 103px;
+  min-width: 46px;
+  width: 21.8%;
+
+  @media (min-width: 425px) {
+    top: 18.5%;
+    left: 48.6%;
+  }
+}
+
+.products__cheese {
+  top: 89px;
+  left: 158px;
+  min-width: 37px;
+  width: 17.5%;
+
+  @media (min-width: 425px) {
+    top: 20.6%;
+    left: 74.5%;
+  }
+}
+
+.products__meat {
+  top: 167px;
+  left: 7px;
+  min-width: 54px;
+  width: 23.2%;
+
+  @media (min-width: 425px) {
+    top: 39.5%;
+    left: 3%;
+  }
+}
+
+.products__chicken {
+  top: 169px;
+  left: 58px;
+  min-width: 66px;
+  width: 28%;
+
+  @media (min-width: 425px) {
+    top: 40.5%;
+    left: 28%;
+  }
+}
+
+.products__chips {
+  top: 176px;
+  left: 129px;
+  min-width: 77px;
+  width: 36.5%;
+
+  @media (min-width: 425px) {
+    top: 41%;
+    left: 61%;
+  }
+}
+
+.products__pineapple {
+  top: 237px;
+  left: 13px;
+  min-width: 35px;
+  width: 16.6%;
+
+  @media (min-width: 425px) {
+    top: 55%;
+    left: 6%;
+  }
+}
+
+.products__bananas {
+  top: 265px;
+  left: 58px;
+  min-width: 47px;
+  width: 22.3%;
+
+  @media (min-width: 425px) {
+    top: 61%;
+    left: 27%;
+  }
+}
+
+.products__apple {
+  top: 276px;
+  left: 115px;
+  min-width: 31px;
+  width: 14.7%;
+
+  @media (min-width: 425px) {
+    top: 64%;
+    left: 54%;
+  }
+}
+
+.products__salad {
+  top: 267px;
+  left: 156px;
+  min-width: 62px;
+  width: 29.4%;
+
+  @media (min-width: 425px) {
+    top: 62%;
+    left: 74%;
+  }
+}
+
+.backet {
+  min-width: 277px;
+  width: 66%;
+  z-index: 10;
+  margin-top: -90px;
+  user-select: none;
+
+  @media (min-width: 425px) {
+    margin-top: -22%;
+  }
+
+  @media (min-width: 768px) {
+    width: 58%;
+    margin-top: -19%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 45%;
+    margin-top: -15%;
+    max-width: 475px;
+  }
+
+  @media (min-width: 1080px) {
+    margin-top: -155px;
+  }
+}
+
+.backet__image {
+  min-width: 277px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    min-width: 300px;
+  }
+
+  @media (min-width: 1024px) {
+    min-width: 375px;
+  }
+}
+
+.button {
+  position: absolute;
+  bottom: 4%;
+  min-width: 174px;
+  min-height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 12px;
+  background-color: #fce000;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  line-height: 17px;
+  font-family: inherit;
+  z-index: 100;
+  cursor: pointer;
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+
+  @media (min-width: 425px) {
+    width: 50%;
+    padding: 22px 14px;
+    font-size: 20px;
+  }
+
+  @media (min-width: 540px) {
+    bottom: 6%;
+  }
+
+  @media (min-width: 768px) {
+    bottom: 5%;
+    padding: 26px 18px;
+    font-size: 24px;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 500px;
+  }
+}
+
+@keyframes blinker {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
